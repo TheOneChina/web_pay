@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        
+        <!-- 
+        <property name="hibernate.connection.url">jdbc:postgresql://101.37.29.183/nda</property>
+         -->
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost/nda</property>
+        <property name="hibernate.connection.username">nda</property>
+        <property name="hibernate.connection.password">txjscoldchain</property>
+        <property name="hibernate.default_schema">nda</property>
+       
+         
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.jdbc.use_streams_for_binary">true</property>
+        <property name="javax.persistence.validation.mode">none</property>
+        
+        <!-- TODO: Remove me for production -->
+        <property name="hibernate.generate_statistics">false</property>
+        <property name="hibernate.use_sql_comments">false</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="format_sql">false</property>
+        <!-- -->
+        
+        <!-- C3P0 connection pooling settings -->
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.min_size">3</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">0</property>
+        <property name="hibernate.c3p0.max_statements">0</property>
+        <property name="hibernate.c3p0.idle_test_period">600</property>
+        <property name="hibernate.c3p0.acquire_increment">1</property>
+        
+        <!-- Mapping-->
+        <mapping class="com.tnsoft.hibernate.model.BinaryFile"/>
+        <mapping class="com.tnsoft.hibernate.model.Crash"/>
+        <mapping class="com.tnsoft.hibernate.model.NDADomain"/>
+        <mapping class="com.tnsoft.hibernate.model.NDARole"/>
+        <mapping class="com.tnsoft.hibernate.model.NDAUser"/>
+        <mapping class="com.tnsoft.hibernate.model.UserRole"/>
+        
+        <!-- Customer -->
+        <mapping class="com.tnsoft.hibernate.model.NDATag"/>
+        <mapping class="com.tnsoft.hibernate.model.NDALog"/>
+        <mapping class="com.tnsoft.hibernate.model.NDAExpress"/>
+        <mapping class="com.tnsoft.hibernate.model.NDATagExpress"/>
+        <mapping class="com.tnsoft.hibernate.model.NDAUserExpress"/>
+        <mapping class="com.tnsoft.hibernate.model.NDALocateExpress"/>
+        <mapping class="com.tnsoft.hibernate.model.NDATempExpress"/>
+        <mapping class="com.tnsoft.hibernate.model.NDAAlertLevel"/>
+        <mapping class="com.tnsoft.hibernate.model.NDAAlert"/>
+        <mapping class="com.tnsoft.hibernate.model.Permission"/>
+        <mapping class="com.tnsoft.hibernate.model.RolePermission"/>
+        
+    </session-factory>
+</hibernate-configuration>

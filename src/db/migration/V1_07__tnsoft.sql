@@ -1,0 +1,1 @@
+alter table nda_alert add column express_id int NOT NULL DEFAULT 0;

@@ -1,0 +1,1 @@
+alter table nda_alert_level add column status smallint NOT NULL DEFAULT 1;

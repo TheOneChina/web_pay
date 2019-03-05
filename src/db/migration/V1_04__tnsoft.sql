@@ -1,0 +1,1 @@
+alter table nda_tag add column token varchar(40);

@@ -1,0 +1,1 @@
+alter table nda_tag add column sleep_time int NOT NULL DEFAULT 2;

@@ -1,0 +1,1 @@
+alter table nda_location_express add column name varchar(50);
